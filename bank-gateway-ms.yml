@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: products
+        uri: lb://BANK-PRODUCTS-MS
+        predicates:
+        - Path=/api/v1/products/**
+      - id: transaction
+        uri: lb://BANK-TRANSACTIONS-MS
+        predicates:
+        - Path=/api/v1/transactions/**
+      - id: customers
+        uri: lb://BANK-CUSTOMERS-MS
+        predicates:
+        - Path=/api/v1/customers/**
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true

@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: bank-transactions-ms
+  profiles:
+    active:
+    - dev
+    - qa
+    - prod

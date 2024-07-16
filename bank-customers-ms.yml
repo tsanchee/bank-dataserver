@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: bank-customers-ms
+  profiles:
+    active:
+    - dev
+    - qa
+    - prod
