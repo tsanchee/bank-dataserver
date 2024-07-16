@@ -1,0 +1,19 @@
+server:
+  port: 28040
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:28761/eureka}
+  instance:
+    preferIpAddress: true
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27019
+      authentication-database: bank-cards-db
+      username: admin
+      password: admin
+      database: bank-cards-db
