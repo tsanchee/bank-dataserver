@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: bank-cards-ms
+  profiles:
+    active:
+    - dev
+    - qa
+    - prod
